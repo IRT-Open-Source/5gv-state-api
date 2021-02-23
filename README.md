@@ -40,7 +40,7 @@ The State API exposes following HTTP endoints to query and change the system sta
     - **Returns**: [Availability](../../../5gv-state-api/blob/master/src/cache-state/dto/availability.dto.ts)
 - `state-api/cache-state/streams/missing`
   - `GET`: list streaming media items missing in the cache
-    - **Returns**: [DataBasePage](../../../5gv-state-api/impl/data-base-page.dto.ts)<[CacheAsset](../../../5gv-dto/blob/master/src/state-api/impl/cache-asset.dto.ts)>
+    - **Returns**: [DataBasePage](../../../5gv-dto/blob/master/src/state-api/impl/data-base-page.dto.ts)<[CacheAsset](../../../5gv-dto/blob/master/src/state-api/impl/cache-asset.dto.ts)>
 - `state-api/cache-state/streams/available`
   - `GET`: list of streaming media items available in the cache
     - **Returns**: [DataBasePage](../../../5gv-dto/blob/master/src/state-api/impl/data-base-page.dto.ts)<[CacheAsset](../../../5gv-dto/blob/master/src/state-api/impl/cache-asset.dto.ts)>
