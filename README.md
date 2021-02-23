@@ -26,7 +26,7 @@ The State API exposes following HTTP endoints to query and change the system sta
 
 - `state-api/aggregator/config`
   - `GET`: list available configurations
-    - **Returns**: [DataBasePage](../../../5gv-dto/-/blob/master/src/state-api/impl/data-base-page.dto.ts)<[AggregatorConfiguration](../../../5gv-dto/-/blob/master/src/aggregator/impl/config.dto.ts)>
+    - **Returns**: [DataBasePage](../../../5gv-dto/src/state-api/impl/data-base-page.dto.ts)<[AggregatorConfiguration](../../../5gv-dto/-/blob/master/src/aggregator/impl/config.dto.ts)>
   - `POST`: apply a new aggregator configuration
     - **Body**: [AggregatorConfiguration](../../../5gv-dto/-/blob/master/src/aggregator/impl/config.dto.ts)
 - `state-api/cache-state`
