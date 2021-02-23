@@ -26,57 +26,57 @@ The State API exposes following HTTP endoints to query and change the system sta
 
 - `state-api/aggregator/config`
   - `GET`: list available configurations
-    - **Returns**: [DataBasePage](../../../5gv-dto/blob/master/src/state-api/impl/data-base-page.dto.ts)<[AggregatorConfiguration](../../../5gv-dto/-/blob/master/src/aggregator/impl/config.dto.ts)>
+    - **Returns**: [DataBasePage](../../../5gv-dto/blob/master/src/state-api/impl/data-base-page.dto.ts)<[AggregatorConfiguration](../../../5gv-dto/blob/master/src/aggregator/impl/config.dto.ts)>
   - `POST`: apply a new aggregator configuration
-    - **Body**: [AggregatorConfiguration](../../../5gv-dto/-/blob/master/src/aggregator/impl/config.dto.ts)
+    - **Body**: [AggregatorConfiguration](../../../5gv-dto/blob/master/src/aggregator/impl/config.dto.ts)
 - `state-api/cache-state`
   - `POST`: initialise a new cache state
-    - **Body**: [CacheStateConfigItem](../../../5gv-dto/-/blob/master/src/state-api/impl/cache-state-config-item.dto.ts)[]
+    - **Body**: [CacheStateConfigItem](../../../5gv-dto/blob/master/src/state-api/impl/cache-state-config-item.dto.ts)[]
 - `state-api/cache-state/streams`
   - `GET`: list of streaming media items
-    - **Returns**: [DataBasePage](../../../5gv-dto/-/blob/master/src/state-api/impl/data-base-page.dto.ts)<[CacheAsset](../../../5gv-dto/-/blob/master/src/state-api/impl/cache-asset.dto.ts)>
+    - **Returns**: [DataBasePage](../../../5gv-dto/blob/master/src/state-api/impl/data-base-page.dto.ts)<[CacheAsset](../../../5gv-dto/blob/master/src/state-api/impl/cache-asset.dto.ts)>
 - `state-api/cache-state/streams/availability`
   - `GET`: return availability statistic
     - **Returns**: [Availability](../../../5gv-state-api/impl/availability.dto.ts)
 - `state-api/cache-state/streams/missing`
   - `GET`: list streaming media items missing in the cache
-    - **Returns**: [DataBasePage](../../../5gv-state-api/impl/data-base-page.dto.ts)<[CacheAsset](../../../5gv-dto/-/blob/master/src/state-api/impl/cache-asset.dto.ts)>
+    - **Returns**: [DataBasePage](../../../5gv-state-api/impl/data-base-page.dto.ts)<[CacheAsset](../../../5gv-dto/blob/master/src/state-api/impl/cache-asset.dto.ts)>
 - `state-api/cache-state/streams/available`
   - `GET`: list of streaming media items available in the cache
-    - **Returns**: [DataBasePage](../../../5gv-dto/-/blob/master/src/state-api/impl/data-base-page.dto.ts)<[CacheAsset](../../../5gv-dto/-/blob/master/src/state-api/impl/cache-asset.dto.ts)>
+    - **Returns**: [DataBasePage](../../../5gv-dto/blob/master/src/state-api/impl/data-base-page.dto.ts)<[CacheAsset](../../../5gv-dto/blob/master/src/state-api/impl/cache-asset.dto.ts)>
   - `POST`: set availability of one or more streaming media items
-    - **Body**: [CacheAssetInfo](../../../5gv-dto/-/blob/master/src/state-api/impl/stream-info.dto.ts)
+    - **Body**: [CacheAssetInfo](../../../5gv-dto/blob/master/src/state-api/impl/stream-info.dto.ts)
 - `state-api/cache-state/streams/:id`
   - `GET`: retrieve streaming media item with given id
     - **Parameter** `id`: caching URL hash of the streaming media item
-    - **Returns**: [CacheAsset](../../../5gv-dto/-/blob/master/src/state-api/impl/cache-asset.dto.ts)[]
+    - **Returns**: [CacheAsset](../../../5gv-dto/blob/master/src/state-api/impl/cache-asset.dto.ts)[]
 - `state-api/cache-state/streams/:id/available`
   - `PATCH`: set availability of one cache asset
     - **Parameter** `id`: caching URL hash of the cache asset
     - **Body**: boolean
 - `state-api/cache-state/media-items`
   - `GET`: lists available media items
-    - **Returns**: [DataBasePage](../../../5gv-dto/-/blob/master/src/state-api/impl/data-base-page.dto.ts)<[MediaItem](../../../5gv-dto/-/blob/master/src/state-api/impl/media-item.dto.ts)>
+    - **Returns**: [DataBasePage](../../../5gv-dto/blob/master/src/state-api/impl/data-base-page.dto.ts)<[MediaItem](../../../5gv-dto/blob/master/src/state-api/impl/media-item.dto.ts)>
 - `state-api/cache-state/media-items/:id`
   - `GET`: returns media item with given id
     - **Parameter**: `id`: id of the media item
-    - **Returns**: [MediaItem](../../../5gv-dto/-/blob/master/src/state-api/impl/media-item.dto.ts)[]
+    - **Returns**: [MediaItem](../../../5gv-dto/blob/master/src/state-api/impl/media-item.dto.ts)[]
 - `state-api/cache-state/media-items/:id/availability`
   - `GET`: returns availability of streaming media items for the given media item id
     - **Parameter**: `id`: id of the media item
-    - **Returns**: [Availability](../../../5gv-dto/-/blob/master/src/state-api/impl/availability.dto.ts)
+    - **Returns**: [Availability](../../../5gv-dto/blob/master/src/state-api/impl/availability.dto.ts)
 - `state-api/cache-state/media-items/:id/available`
   - `GET`: returns available cache assets for the given media item id
     - **Parameter**: `id`: id of the media item
-    - **Returns**: [DataBasePage](../../../5gv-dto/-/blob/master/src/state-api/impl/data-base-page.dto.ts)<[CacheAsset](../../../5gv-dto/-/blob/master/src/state-api/impl/cache-asset.dto.ts)>
+    - **Returns**: [DataBasePage](../../../5gv-dto/blob/master/src/state-api/impl/data-base-page.dto.ts)<[CacheAsset](../../../5gv-dto/blob/master/src/state-api/impl/cache-asset.dto.ts)>
 - `state-api/cache-state/media-items/:id/missing`
   - `GET`: returns missing cache assets for the given media item id
     - **Parameter**: `id`: id of the media item
-    - **Returns**: [DataBasePage](../../../5gv-dto/-/blob/master/src/state-api/impl/data-base-page.dto.ts)<[CacheAsset](h../../../5gv-dto/-/blob/master/src/state-api/impl/cache-asset.dto.ts)>
+    - **Returns**: [DataBasePage](../../../5gv-dto/blob/master/src/state-api/impl/data-base-page.dto.ts)<[CacheAsset](../../../5gv-dto/blob/master/src/state-api/impl/cache-asset.dto.ts)>
 - `state-api/cache-state/media-items/:id/streams`
   - `GET`: returns cache assets for the given media item id
     - **Parameter**: `id`: id of the media item
-    - **Returns**: [DataBasePage](../../../5gv-dto/-/blob/master/src/state-api/impl/data-base-page.dto.ts)<[CacheAsset](../../../5gv-dto/-/blob/master/src/state-api/impl/cache-asset.dto.ts)>
+    - **Returns**: [DataBasePage](../../../5gv-dto/blob/master/src/state-api/impl/data-base-page.dto.ts)<[CacheAsset](../../../5gv-dto/blob/master/src/state-api/impl/cache-asset.dto.ts)>
 
 ## Technologie used
 
