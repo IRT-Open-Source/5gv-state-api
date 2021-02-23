@@ -1,0 +1,36 @@
+version: "3"
+services:
+  state-db:
+    image: mongo:latest
+    container_name: state-db
+    environment:
+      - MONGO_INITDB_DATABASE=state-db
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+    ports:
+      - 27017:27017
+    volumes:
+      - state-db_data_container:/data/db
+
+  message-broker:
+    container_name: message-broker
+    image: message-broker:latest
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+
+  state-api:
+    container_name: state-api
+    image: state-api
+    volumes:
+      - .:/usr/state-api
+      - /usr/state-api/node_modules
+      - /usr/state-api/dist
+    command: [npm, "run", "start:dev"]
+    depends_on:
+      - state-db
+    ports:
+      - 3000:3000
+
+volumes:
+  state-db_data_container:

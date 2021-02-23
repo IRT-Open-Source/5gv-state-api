@@ -1,0 +1,19 @@
+{
+  "base": "http://state-api:3000/cache-state",
+  "mediaItems": {
+    "all": "/media-items",
+    "one": "/media-items/:mediaItemId"
+  },
+  "streams": {
+    "all": "/streams",
+    "one": "/streams/:id",
+    "missing": {
+      "all": "/streams/missing",
+      "mediaItem": "/streams/:mediaItemId/missing"
+    },
+    "available": {
+      "all": "/streams/available",
+      "mediaItem": "/streams/:mediaItemId/available"
+    }
+  }
+}
