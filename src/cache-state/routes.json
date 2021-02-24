@@ -1,5 +1,5 @@
 {
-  "base": "http://state-api:3000/cache-state",
+  "base": "http://5gv-state-api:3000/cache-state",
   "mediaItems": {
     "all": "/media-items",
     "one": "/media-items/:mediaItemId"
