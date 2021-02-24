@@ -20,7 +20,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "5gv-dto": "git+ssh://git@gitlab.irt.de/5g-victori/dto.git",
+    "5gv-dto": "git+ssh://git@github.com/IRT-Open-Source/5gv-dto.git",
     "@nestjs/common": "^7.5.2",
     "@nestjs/core": "^7.5.2",
     "@nestjs/mongoose": "^7.0.2",
