@@ -8,11 +8,11 @@ import { MessengerService } from './messenger/messenger.service';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://state-db:27017', {
+    MongooseModule.forRoot('mongodb://5gv-state-db:27017', {
       useNewUrlParser: true,
       user: 'root',
       pass: 'admin',
-      dbName: 'state-db',
+      dbName: '5gv-state-db',
       useUnifiedTopology: true,
     }),
     AggregatorModule,
